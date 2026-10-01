@@ -1,0 +1,52 @@
+.custom-input {
+  position: relative;
+  $root: &;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  &__error-text {
+
+    color: $color-orange-red;
+    border: 1px solid $color-orange-red;
+    border-radius: 10px;
+    width: 100%;
+    height: 38px;
+    background-color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+
+    &--error {
+      .custom-input__error-text {
+        display: flex;
+      }
+    }
+
+  &__field {
+    border: 1px solid transparent;
+    background-color: rgba($color-jaguar, .05);
+    border-radius: 200px;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px 20px;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    transition: background-color $transition-300;
+
+    &::placeholder {
+      color: rgba($color-jaguar, 0.3);
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color:$color-white;
+    }
+
+  }
+}
+
